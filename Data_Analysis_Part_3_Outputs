@@ -1,0 +1,815 @@
+
+LOCATION_ID STREET_ADDRESS                           POSTAL_CODE  CITY                           STATE_PROVINCE            CO
+----------- ---------------------------------------- ------------ ------------------------------ ------------------------- --
+       1000 1297 Via Cola di Rie                     00989        Roma                                                     IT
+       1100 93091 Calle della Testa                  10934        Venice                                                   IT
+       1200 2017 Shinjuku-ku                         1689         Tokyo                          Tokyo Prefecture          JP
+       1300 9450 Kamiya-cho                          6823         Hiroshima                                                JP
+       1400 2014 Jabberwocky Rd                      26192        Southlake                      Texas                     US
+       1500 2011 Interiors Blvd                      99236        South San Francisco            California                US
+       1600 2007 Zagora St                           50090        South Brunswick                New Jersey                US
+       1700 2004 Charade Rd                          98199        Seattle                        Washington                US
+       1800 147 Spadina Ave                          M5V 2L7      Toronto                        Ontario                   CA
+       1900 6092 Boxwood St                          YSW 9T2      Whitehorse                     Yukon                     CA
+       2000 40-5-12 Laogianggen                      190518       Beijing                                                  CN
+
+LOCATION_ID STREET_ADDRESS                           POSTAL_CODE  CITY                           STATE_PROVINCE            CO
+----------- ---------------------------------------- ------------ ------------------------------ ------------------------- --
+       2100 1298 Vileparle (E)                       490231       Bombay                         Maharashtra               IN
+       2200 12-98 Victoria Street                    2901         Sydney                         New South Wales           AU
+       2300 198 Clementi North                       540198       Singapore                                                SG
+       2400 8204 Arthur St                                        London                                                   UK
+       2500 Magdalen Centre, The Oxford Science Park OX9 9ZB      Oxford                         Oxford                    UK
+       2600 9702 Chester Road                        09629850293  Stretford                      Manchester                UK
+       2700 Schwanthalerstr. 7031                    80925        Munich                         Bavaria                   DE
+       2800 Rua Frei Caneca 1360                     01307-002    Sao Paulo                      Sao Paulo                 BR
+       2900 20 Rue des Corps-Saints                  1730         Geneva                         Geneve                    CH
+       3000 Murtenstrasse 921                        3095         Bern                           BE                        CH
+       3100 Pieter Breughelstraat 837                3029SK       Utrecht                        Utrecht                   NL
+
+LOCATION_ID STREET_ADDRESS                           POSTAL_CODE  CITY                           STATE_PROVINCE            CO
+----------- ---------------------------------------- ------------ ------------------------------ ------------------------- --
+       3200 Mariano Escobedo 9991                    11932        Mexico City                    Distrito Federal,         MX
+
+23 rows selected. 
+
+
+DEPARTMENT_ID DEPARTMENT_NAME                MANAGER_ID LOCATION_ID
+------------- ------------------------------ ---------- -----------
+           10 Administration                        200        1700
+           20 Marketing                             201        1800
+           30 Purchasing                            114        1700
+           40 Human Resources                       203        2400
+           50 Shipping                              121        1500
+           60 IT                                    103        1400
+           70 Public Relations                      204        2700
+           80 Sales                                 145        2500
+           90 Executive                             100        1700
+          100 Finance                               108        1700
+          110 Accounting                            205        1700
+
+DEPARTMENT_ID DEPARTMENT_NAME                MANAGER_ID LOCATION_ID
+------------- ------------------------------ ---------- -----------
+          120 Treasury                                         1700
+          130 Corporate Tax                                    1700
+          140 Control And Credit                               1700
+          150 Shareholder Services                             1700
+          160 Benefits                                         1700
+          170 Manufacturing                                    1700
+          180 Construction                                     1700
+          190 Contracting                                      1700
+          200 Operations                                       1700
+          210 IT Support                                       1700
+          220 NOC                                              1700
+
+DEPARTMENT_ID DEPARTMENT_NAME                MANAGER_ID LOCATION_ID
+------------- ------------------------------ ---------- -----------
+          230 IT Helpdesk                                      1700
+          240 Government Sales                                 1700
+          250 Retail Sales                                     1700
+          260 Recruiting                                       1700
+          270 Payroll                                          1700
+
+27 rows selected. 
+
+
+JOB_ID     JOB_TITLE                           MIN_SALARY MAX_SALARY
+---------- ----------------------------------- ---------- ----------
+AD_PRES    President                                20000      40000
+AD_VP      Administration Vice President            15000      30000
+AD_ASST    Administration Assistant                  3000       6000
+FI_MGR     Finance Manager                           8200      16000
+FI_ACCOUNT Accountant                                4200       9000
+AC_MGR     Accounting Manager                        8200      16000
+AC_ACCOUNT Public Accountant                         4200       9000
+SA_MAN     Sales Manager                            10000      20000
+SA_REP     Sales Representative                      6000      12000
+PU_MAN     Purchasing Manager                        8000      15000
+PU_CLERK   Purchasing Clerk                          2500       5500
+
+JOB_ID     JOB_TITLE                           MIN_SALARY MAX_SALARY
+---------- ----------------------------------- ---------- ----------
+ST_MAN     Stock Manager                             5500       8500
+ST_CLERK   Stock Clerk                               2000       5000
+SH_CLERK   Shipping Clerk                            2500       5500
+IT_PROG    Programmer                                4000      10000
+MK_MAN     Marketing Manager                         9000      15000
+MK_REP     Marketing Representative                  4000       9000
+HR_REP     Human Resources Representative            4000       9000
+PR_REP     Public Relations Representative           4500      10500
+
+19 rows selected. 
+
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        100 Steven               King                      SKING                     515.123.4567         17-06-87 AD_PRES         24000                                      90
+        101 Neena                Kochhar                   NKOCHHAR                  515.123.4568         21-09-89 AD_VP           17000                       100            90
+        102 Lex                  De Haan                   LDEHAAN                   515.123.4569         13-01-93 AD_VP           17000                       100            90
+        103 Alexander            Hunold                    AHUNOLD                   590.423.4567         03-01-90 IT_PROG          9000                       102            60
+        104 Bruce                Ernst                     BERNST                    590.423.4568         21-05-91 IT_PROG          6000                       103            60
+        105 David                Austin                    DAUSTIN                   590.423.4569         25-06-97 IT_PROG          4800                       103            60
+        106 Valli                Pataballa                 VPATABAL                  590.423.4560         05-02-98 IT_PROG          4800                       103            60
+        107 Diana                Lorentz                   DLORENTZ                  590.423.5567         07-02-99 IT_PROG          4200                       103            60
+        108 Nancy                Greenberg                 NGREENBE                  515.124.4569         17-08-94 FI_MGR          12000                       101           100
+        109 Daniel               Faviet                    DFAVIET                   515.124.4169         16-08-94 FI_ACCOUNT       9000                       108           100
+        110 John                 Chen                      JCHEN                     515.124.4269         28-09-97 FI_ACCOUNT       8200                       108           100
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        111 Ismael               Sciarra                   ISCIARRA                  515.124.4369         30-09-97 FI_ACCOUNT       7700                       108           100
+        112 Jose Manuel          Urman                     JMURMAN                   515.124.4469         07-03-98 FI_ACCOUNT       7800                       108           100
+        113 Luis                 Popp                      LPOPP                     515.124.4567         07-12-99 FI_ACCOUNT       6900                       108           100
+        114 Den                  Raphaely                  DRAPHEAL                  515.127.4561         07-12-94 PU_MAN          11000                       100            30
+        115 Alexander            Khoo                      AKHOO                     515.127.4562         18-05-95 PU_CLERK         3100                       114            30
+        116 Shelli               Baida                     SBAIDA                    515.127.4563         24-12-97 PU_CLERK         2900                       114            30
+        117 Sigal                Tobias                    STOBIAS                   515.127.4564         24-07-97 PU_CLERK         2800                       114            30
+        118 Guy                  Himuro                    GHIMURO                   515.127.4565         15-11-98 PU_CLERK         2600                       114            30
+        119 Karen                Colmenares                KCOLMENA                  515.127.4566         10-08-99 PU_CLERK         2500                       114            30
+        120 Matthew              Weiss                     MWEISS                    650.123.1234         18-07-96 ST_MAN           8000                       100            50
+        121 Adam                 Fripp                     AFRIPP                    650.123.2234         10-04-97 ST_MAN           8200                       100            50
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        122 Payam                Kaufling                  PKAUFLIN                  650.123.3234         01-05-95 ST_MAN           7900                       100            50
+        123 Shanta               Vollman                   SVOLLMAN                  650.123.4234         10-10-97 ST_MAN           6500                       100            50
+        124 Kevin                Mourgos                   KMOURGOS                  650.123.5234         16-11-99 ST_MAN           5800                       100            50
+        125 Julia                Nayer                     JNAYER                    650.124.1214         16-07-97 ST_CLERK         3200                       120            50
+        126 Irene                Mikkilineni               IMIKKILI                  650.124.1224         28-09-98 ST_CLERK         2700                       120            50
+        127 James                Landry                    JLANDRY                   650.124.1334         14-01-99 ST_CLERK         2400                       120            50
+        128 Steven               Markle                    SMARKLE                   650.124.1434         08-03-00 ST_CLERK         2200                       120            50
+        129 Laura                Bissot                    LBISSOT                   650.124.5234         20-08-97 ST_CLERK         3300                       121            50
+        130 Mozhe                Atkinson                  MATKINSO                  650.124.6234         30-10-97 ST_CLERK         2800                       121            50
+        131 James                Marlow                    JAMRLOW                   650.124.7234         16-02-97 ST_CLERK         2500                       121            50
+        132 TJ                   Olson                     TJOLSON                   650.124.8234         10-04-99 ST_CLERK         2100                       121            50
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        133 Jason                Mallin                    JMALLIN                   650.127.1934         14-06-96 ST_CLERK         3300                       122            50
+        134 Michael              Rogers                    MROGERS                   650.127.1834         26-08-98 ST_CLERK         2900                       122            50
+        135 Ki                   Gee                       KGEE                      650.127.1734         12-12-99 ST_CLERK         2400                       122            50
+        136 Hazel                Philtanker                HPHILTAN                  650.127.1634         06-02-00 ST_CLERK         2200                       122            50
+        137 Renske               Ladwig                    RLADWIG                   650.121.1234         14-07-95 ST_CLERK         3600                       123            50
+        138 Stephen              Stiles                    SSTILES                   650.121.2034         26-10-97 ST_CLERK         3200                       123            50
+        139 John                 Seo                       JSEO                      650.121.2019         12-02-98 ST_CLERK         2700                       123            50
+        140 Joshua               Patel                     JPATEL                    650.121.1834         06-04-98 ST_CLERK         2500                       123            50
+        141 Trenna               Rajs                      TRAJS                     650.121.8009         17-10-95 ST_CLERK         3500                       124            50
+        142 Curtis               Davies                    CDAVIES                   650.121.2994         29-01-97 ST_CLERK         3100                       124            50
+        143 Randall              Matos                     RMATOS                    650.121.2874         15-03-98 ST_CLERK         2600                       124            50
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        144 Peter                Vargas                    PVARGAS                   650.121.2004         09-07-98 ST_CLERK         2500                       124            50
+        145 John                 Russell                   JRUSSEL                   011.44.1344.429268   01-10-96 SA_MAN          14000             .4        100            80
+        146 Karen                Partners                  KPARTNER                  011.44.1344.467268   05-01-97 SA_MAN          13500             .3        100            80
+        147 Alberto              Errazuriz                 AERRAZUR                  011.44.1344.429278   10-03-97 SA_MAN          12000             .3        100            80
+        148 Gerald               Cambrault                 GCAMBRAU                  011.44.1344.619268   15-10-99 SA_MAN          11000             .3        100            80
+        149 Eleni                Zlotkey                   EZLOTKEY                  011.44.1344.429018   29-01-00 SA_MAN          10500             .2        100            80
+        150 Peter                Tucker                    PTUCKER                   011.44.1344.129268   30-01-97 SA_REP          10000             .3        145            80
+        151 David                Bernstein                 DBERNSTE                  011.44.1344.345268   24-03-97 SA_REP           9500            .25        145            80
+        152 Peter                Hall                      PHALL                     011.44.1344.478968   20-08-97 SA_REP           9000            .25        145            80
+        153 Christopher          Olsen                     COLSEN                    011.44.1344.498718   30-03-98 SA_REP           8000             .2        145            80
+        154 Nanette              Cambrault                 NCAMBRAU                  011.44.1344.987668   09-12-98 SA_REP           7500             .2        145            80
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        155 Oliver               Tuvault                   OTUVAULT                  011.44.1344.486508   23-11-99 SA_REP           7000            .15        145            80
+        156 Janette              King                      JKING                     011.44.1345.429268   30-01-96 SA_REP          10000            .35        146            80
+        157 Patrick              Sully                     PSULLY                    011.44.1345.929268   04-03-96 SA_REP           9500            .35        146            80
+        158 Allan                McEwen                    AMCEWEN                   011.44.1345.829268   01-08-96 SA_REP           9000            .35        146            80
+        159 Lindsey              Smith                     LSMITH                    011.44.1345.729268   10-03-97 SA_REP           8000             .3        146            80
+        160 Louise               Doran                     LDORAN                    011.44.1345.629268   15-12-97 SA_REP           7500             .3        146            80
+        161 Sarath               Sewall                    SSEWALL                   011.44.1345.529268   03-11-98 SA_REP           7000            .25        146            80
+        162 Clara                Vishney                   CVISHNEY                  011.44.1346.129268   11-11-97 SA_REP          10500            .25        147            80
+        163 Danielle             Greene                    DGREENE                   011.44.1346.229268   19-03-99 SA_REP           9500            .15        147            80
+        164 Mattea               Marvins                   MMARVINS                  011.44.1346.329268   24-01-00 SA_REP           7200             .1        147            80
+        165 David                Lee                       DLEE                      011.44.1346.529268   23-02-00 SA_REP           6800             .1        147            80
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        166 Sundar               Ande                      SANDE                     011.44.1346.629268   24-03-00 SA_REP           6400             .1        147            80
+        167 Amit                 Banda                     ABANDA                    011.44.1346.729268   21-04-00 SA_REP           6200             .1        147            80
+        168 Lisa                 Ozer                      LOZER                     011.44.1343.929268   11-03-97 SA_REP          11500            .25        148            80
+        169 Harrison             Bloom                     HBLOOM                    011.44.1343.829268   23-03-98 SA_REP          10000             .2        148            80
+        170 Tayler               Fox                       TFOX                      011.44.1343.729268   24-01-98 SA_REP           9600             .2        148            80
+        171 William              Smith                     WSMITH                    011.44.1343.629268   23-02-99 SA_REP           7400            .15        148            80
+        172 Elizabeth            Bates                     EBATES                    011.44.1343.529268   24-03-99 SA_REP           7300            .15        148            80
+        173 Sundita              Kumar                     SKUMAR                    011.44.1343.329268   21-04-00 SA_REP           6100             .1        148            80
+        174 Ellen                Abel                      EABEL                     011.44.1644.429267   11-05-96 SA_REP          11000             .3        149            80
+        175 Alyssa               Hutton                    AHUTTON                   011.44.1644.429266   19-03-97 SA_REP           8800            .25        149            80
+        176 Jonathon             Taylor                    JTAYLOR                   011.44.1644.429265   24-03-98 SA_REP           8600             .2        149            80
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        177 Jack                 Livingston                JLIVINGS                  011.44.1644.429264   23-04-98 SA_REP           8400             .2        149            80
+        178 Kimberely            Grant                     KGRANT                    011.44.1644.429263   24-05-99 SA_REP           7000            .15        149              
+        179 Charles              Johnson                   CJOHNSON                  011.44.1644.429262   04-01-00 SA_REP           6200             .1        149            80
+        180 Winston              Taylor                    WTAYLOR                   650.507.9876         24-01-98 SH_CLERK         3200                       120            50
+        181 Jean                 Fleaur                    JFLEAUR                   650.507.9877         23-02-98 SH_CLERK         3100                       120            50
+        182 Martha               Sullivan                  MSULLIVA                  650.507.9878         21-06-99 SH_CLERK         2500                       120            50
+        183 Girard               Geoni                     GGEONI                    650.507.9879         03-02-00 SH_CLERK         2800                       120            50
+        184 Nandita              Sarchand                  NSARCHAN                  650.509.1876         27-01-96 SH_CLERK         4200                       121            50
+        185 Alexis               Bull                      ABULL                     650.509.2876         20-02-97 SH_CLERK         4100                       121            50
+        186 Julia                Dellinger                 JDELLING                  650.509.3876         24-06-98 SH_CLERK         3400                       121            50
+        187 Anthony              Cabrio                    ACABRIO                   650.509.4876         07-02-99 SH_CLERK         3000                       121            50
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        188 Kelly                Chung                     KCHUNG                    650.505.1876         14-06-97 SH_CLERK         3800                       122            50
+        189 Jennifer             Dilly                     JDILLY                    650.505.2876         13-08-97 SH_CLERK         3600                       122            50
+        190 Timothy              Gates                     TGATES                    650.505.3876         11-07-98 SH_CLERK         2900                       122            50
+        191 Randall              Perkins                   RPERKINS                  650.505.4876         19-12-99 SH_CLERK         2500                       122            50
+        192 Sarah                Bell                      SBELL                     650.501.1876         04-02-96 SH_CLERK         4000                       123            50
+        193 Britney              Everett                   BEVERETT                  650.501.2876         03-03-97 SH_CLERK         3900                       123            50
+        194 Samuel               McCain                    SMCCAIN                   650.501.3876         01-07-98 SH_CLERK         3200                       123            50
+        195 Vance                Jones                     VJONES                    650.501.4876         17-03-99 SH_CLERK         2800                       123            50
+        196 Alana                Walsh                     AWALSH                    650.507.9811         24-04-98 SH_CLERK         3100                       124            50
+        197 Kevin                Feeney                    KFEENEY                   650.507.9822         23-05-98 SH_CLERK         3000                       124            50
+        198 Donald               OConnell                  DOCONNEL                  650.507.9833         21-06-99 SH_CLERK         2600                       124            50
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        199 Douglas              Grant                     DGRANT                    650.507.9844         13-01-00 SH_CLERK         2600                       124            50
+        200 Jennifer             Whalen                    JWHALEN                   515.123.4444         17-09-87 AD_ASST          4400                       101            10
+        201 Michael              Hartstein                 MHARTSTE                  515.123.5555         17-02-96 MK_MAN          13000                       100            20
+        202 Pat                  Fay                       PFAY                      603.123.6666         17-08-97 MK_REP           6000                       201            20
+        203 Susan                Mavris                    SMAVRIS                   515.123.7777         07-06-94 HR_REP           6500                       101            40
+        204 Hermann              Baer                      HBAER                     515.123.8888         07-06-94 PR_REP          10000                       101            70
+        205 Shelley              Higgins                   SHIGGINS                  515.123.8080         07-06-94 AC_MGR          12000                       101           110
+        206 William              Gietz                     WGIETZ                    515.123.8181         07-06-94 AC_ACCOUNT       8300                       205           110
+
+107 rows selected. 
+
+
+EMPLOYEE_ID START_DA END_DATE JOB_ID     DEPARTMENT_ID
+----------- -------- -------- ---------- -------------
+        102 13-01-93 24-07-98 IT_PROG               60
+        101 21-09-89 27-10-93 AC_ACCOUNT           110
+        101 28-10-93 15-03-97 AC_MGR               110
+        201 17-02-96 19-12-99 MK_REP                20
+        114 24-03-98 31-12-99 ST_CLERK              50
+        122 01-01-99 31-12-99 ST_CLERK              50
+        200 17-09-87 17-06-93 AD_ASST               90
+        176 24-03-98 31-12-98 SA_REP                80
+        176 01-01-99 31-12-99 SA_MAN                80
+        200 01-07-94 31-12-98 AC_ACCOUNT            90
+
+10 rows selected. 
+
+
+ REGION_ID REGION_NAME              
+---------- -------------------------
+         1 Europe                   
+         2 Americas                 
+         3 Asia                     
+         4 Middle East and Africa   
+
+
+CO COUNTRY_NAME                              REGION_ID
+-- ---------------------------------------- ----------
+AR Argentina                                         2
+AU Australia                                         3
+BE Belgium                                           1
+BR Brazil                                            2
+CA Canada                                            2
+CH Switzerland                                       1
+CN China                                             3
+DE Germany                                           1
+DK Denmark                                           1
+EG Egypt                                             4
+FR France                                            1
+
+CO COUNTRY_NAME                              REGION_ID
+-- ---------------------------------------- ----------
+HK HongKong                                          3
+IL Israel                                            4
+IN India                                             3
+IT Italy                                             1
+JP Japan                                             3
+KW Kuwait                                            4
+MX Mexico                                            2
+NG Nigeria                                           4
+NL Netherlands                                       1
+SG Singapore                                         3
+UK United Kingdom                                    1
+
+CO COUNTRY_NAME                              REGION_ID
+-- ---------------------------------------- ----------
+US United States of America                          2
+ZM Zambia                                            4
+ZW Zimbabwe                                          4
+
+25 rows selected. 
+
+
+LOCATION_ID POSTAL_CODE CITY                           CO
+----------- ----------- ------------------------------ --
+       1000      411007 PUNE                           IN
+       1001      495442 RATANPUR                       IN
+       1002      110001 DELHI                          IN
+       1003         989 Roma                           IT
+       1004       10934 Venice                         IT
+       1005        1689 Tokyo                          JP
+
+6 rows selected. 
+
+
+DEPARTMENT_ID DEPARTMENT_NAME                MANAGER_ID LOCATION_ID
+------------- ------------------------------ ---------- -----------
+           10 Administration                        200        1700
+           20 Marketing                             201        1800
+           30 Purchasing                            114        1700
+           40 Human Resources                       203        2400
+           50 Shipping                              121        1500
+           60 IT                                    103        1400
+           70 Public Relations                      204        2700
+           80 Sales                                 145        2500
+           90 Executive                             100        1700
+          100 Finance                               108        1700
+          110 Accounting                            205        1700
+
+11 rows selected. 
+
+
+DEPARTMENT_ID DEPARTMENT_NAME               
+------------- ------------------------------
+           10 Administration                
+           20 Marketing                     
+           30 Purchasing                    
+           40 Human Resources               
+           50 Shipping                      
+           60 IT                            
+           70 Public Relations              
+           80 Sales                         
+           90 Executive                     
+          100 Finance                       
+          110 Accounting                    
+
+11 rows selected. 
+
+
+DEPARTMENT_ID DEPARTMENT_NAME                MANAGER_ID LOCATION_ID
+------------- ------------------------------ ---------- -----------
+           20 Marketing                             201        1800
+
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        202 Pat                  Fay                       PFAY                      603.123.6666         17-08-97 MK_REP           6000                       201            20
+
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        202 Pat                  Fay                       PFAY                      603.123.6666         17-08-97 MK_REP           6000                       201            20
+
+
+EMPLOYEE_ID FIRST_NAME           DEPARTMENT_NAME                CITY                          
+----------- -------------------- ------------------------------ ------------------------------
+        103 Alexander            IT                             Southlake                     
+        104 Bruce                IT                             Southlake                     
+        105 David                IT                             Southlake                     
+        106 Valli                IT                             Southlake                     
+        107 Diana                IT                             Southlake                     
+        120 Matthew                                                                           
+        121 Adam                                                                              
+        122 Payam                                                                             
+        123 Shanta                                                                            
+        124 Kevin                                                                             
+        125 Julia                                                                             
+
+EMPLOYEE_ID FIRST_NAME           DEPARTMENT_NAME                CITY                          
+----------- -------------------- ------------------------------ ------------------------------
+        126 Irene                                                                             
+        127 James                                                                             
+        128 Steven                                                                            
+        129 Laura                                                                             
+        130 Mozhe                                                                             
+        131 James                                                                             
+        132 TJ                                                                                
+        133 Jason                                                                             
+        134 Michael                                                                           
+        135 Ki                                                                                
+        136 Hazel                                                                             
+
+EMPLOYEE_ID FIRST_NAME           DEPARTMENT_NAME                CITY                          
+----------- -------------------- ------------------------------ ------------------------------
+        137 Renske                                                                            
+        138 Stephen                                                                           
+        139 John                                                                              
+        140 Joshua                                                                            
+        141 Trenna                                                                            
+        142 Curtis                                                                            
+        143 Randall                                                                           
+        144 Peter                                                                             
+        180 Winston                                                                           
+        181 Jean                                                                              
+        182 Martha                                                                            
+
+EMPLOYEE_ID FIRST_NAME           DEPARTMENT_NAME                CITY                          
+----------- -------------------- ------------------------------ ------------------------------
+        183 Girard                                                                            
+        184 Nandita                                                                           
+        185 Alexis                                                                            
+        186 Julia                                                                             
+        187 Anthony                                                                           
+        188 Kelly                                                                             
+        189 Jennifer                                                                          
+        190 Timothy                                                                           
+        191 Randall                                                                           
+        192 Sarah                                                                             
+        193 Britney                                                                           
+
+EMPLOYEE_ID FIRST_NAME           DEPARTMENT_NAME                CITY                          
+----------- -------------------- ------------------------------ ------------------------------
+        194 Samuel                                                                            
+        195 Vance                                                                             
+        196 Alana                                                                             
+        197 Kevin                                                                             
+        198 Donald                                                                            
+        199 Douglas                                                                           
+        203 Susan                                                                             
+        205 Shelley                                                                           
+        206 William                                                                           
+        114 Den                                                                               
+        115 Alexander                                                                         
+
+EMPLOYEE_ID FIRST_NAME           DEPARTMENT_NAME                CITY                          
+----------- -------------------- ------------------------------ ------------------------------
+        116 Shelli                                                                            
+        117 Sigal                                                                             
+        118 Guy                                                                               
+        119 Karen                                                                             
+        100 Steven                                                                            
+        101 Neena                                                                             
+        102 Lex                                                                               
+        204 Hermann                                                                           
+        200 Jennifer                                                                          
+        178 Kimberely                                                                         
+        201 Michael                                                                           
+
+EMPLOYEE_ID FIRST_NAME           DEPARTMENT_NAME                CITY                          
+----------- -------------------- ------------------------------ ------------------------------
+        202 Pat                                                                               
+        108 Nancy                                                                             
+        109 Daniel                                                                            
+        110 John                                                                              
+        111 Ismael                                                                            
+        112 Jose Manuel                                                                       
+        113 Luis                                                                              
+        145 John                                                                              
+        146 Karen                                                                             
+        147 Alberto                                                                           
+        148 Gerald                                                                            
+
+EMPLOYEE_ID FIRST_NAME           DEPARTMENT_NAME                CITY                          
+----------- -------------------- ------------------------------ ------------------------------
+        149 Eleni                                                                             
+        150 Peter                                                                             
+        151 David                                                                             
+        152 Peter                                                                             
+        153 Christopher                                                                       
+        154 Nanette                                                                           
+        155 Oliver                                                                            
+        156 Janette                                                                           
+        157 Patrick                                                                           
+        158 Allan                                                                             
+        159 Lindsey                                                                           
+
+EMPLOYEE_ID FIRST_NAME           DEPARTMENT_NAME                CITY                          
+----------- -------------------- ------------------------------ ------------------------------
+        160 Louise                                                                            
+        161 Sarath                                                                            
+        162 Clara                                                                             
+        163 Danielle                                                                          
+        164 Mattea                                                                            
+        165 David                                                                             
+        166 Sundar                                                                            
+        167 Amit                                                                              
+        168 Lisa                                                                              
+        169 Harrison                                                                          
+        170 Tayler                                                                            
+
+EMPLOYEE_ID FIRST_NAME           DEPARTMENT_NAME                CITY                          
+----------- -------------------- ------------------------------ ------------------------------
+        171 William                                                                           
+        172 Elizabeth                                                                         
+        173 Sundita                                                                           
+        174 Ellen                                                                             
+        175 Alyssa                                                                            
+        176 Jonathon                                                                          
+        177 Jack                                                                              
+        179 Charles                                                                           
+
+107 rows selected. 
+
+
+MAX_SALARY
+----------
+     24000
+
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        100 Steven               King                      SKING                     515.123.4567         17-06-87 AD_PRES         24000                                      90
+
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        132 TJ                   Olson                     TJOLSON                   650.124.8234         10-04-99 ST_CLERK         2100                       121            50
+
+
+TOTAL_SALARY
+------------
+      691400
+
+
+  COUNT(*)
+----------
+       107
+
+
+AVERAGE_SALARY
+--------------
+       6461.68
+
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        100 Steven               King                      SKING                     515.123.4567         17-06-87 AD_PRES         24000                                      90
+        101 Neena                Kochhar                   NKOCHHAR                  515.123.4568         21-09-89 AD_VP           17000                       100            90
+        102 Lex                  De Haan                   LDEHAAN                   515.123.4569         13-01-93 AD_VP           17000                       100            90
+        145 John                 Russell                   JRUSSEL                   011.44.1344.429268   01-10-96 SA_MAN          14000             .4        100            80
+        146 Karen                Partners                  KPARTNER                  011.44.1344.467268   05-01-97 SA_MAN          13500             .3        100            80
+        201 Michael              Hartstein                 MHARTSTE                  515.123.5555         17-02-96 MK_MAN          13000                       100            20
+        108 Nancy                Greenberg                 NGREENBE                  515.124.4569         17-08-94 FI_MGR          12000                       101           100
+        205 Shelley              Higgins                   SHIGGINS                  515.123.8080         07-06-94 AC_MGR          12000                       101           110
+        147 Alberto              Errazuriz                 AERRAZUR                  011.44.1344.429278   10-03-97 SA_MAN          12000             .3        100            80
+        168 Lisa                 Ozer                      LOZER                     011.44.1343.929268   11-03-97 SA_REP          11500            .25        148            80
+        148 Gerald               Cambrault                 GCAMBRAU                  011.44.1344.619268   15-10-99 SA_MAN          11000             .3        100            80
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        174 Ellen                Abel                      EABEL                     011.44.1644.429267   11-05-96 SA_REP          11000             .3        149            80
+        114 Den                  Raphaely                  DRAPHEAL                  515.127.4561         07-12-94 PU_MAN          11000                       100            30
+        162 Clara                Vishney                   CVISHNEY                  011.44.1346.129268   11-11-97 SA_REP          10500            .25        147            80
+        149 Eleni                Zlotkey                   EZLOTKEY                  011.44.1344.429018   29-01-00 SA_MAN          10500             .2        100            80
+        204 Hermann              Baer                      HBAER                     515.123.8888         07-06-94 PR_REP          10000                       101            70
+        150 Peter                Tucker                    PTUCKER                   011.44.1344.129268   30-01-97 SA_REP          10000             .3        145            80
+        169 Harrison             Bloom                     HBLOOM                    011.44.1343.829268   23-03-98 SA_REP          10000             .2        148            80
+        156 Janette              King                      JKING                     011.44.1345.429268   30-01-96 SA_REP          10000            .35        146            80
+        170 Tayler               Fox                       TFOX                      011.44.1343.729268   24-01-98 SA_REP           9600             .2        148            80
+        163 Danielle             Greene                    DGREENE                   011.44.1346.229268   19-03-99 SA_REP           9500            .15        147            80
+        151 David                Bernstein                 DBERNSTE                  011.44.1344.345268   24-03-97 SA_REP           9500            .25        145            80
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        157 Patrick              Sully                     PSULLY                    011.44.1345.929268   04-03-96 SA_REP           9500            .35        146            80
+        103 Alexander            Hunold                    AHUNOLD                   590.423.4567         03-01-90 IT_PROG          9000                       102            60
+        152 Peter                Hall                      PHALL                     011.44.1344.478968   20-08-97 SA_REP           9000            .25        145            80
+        158 Allan                McEwen                    AMCEWEN                   011.44.1345.829268   01-08-96 SA_REP           9000            .35        146            80
+        109 Daniel               Faviet                    DFAVIET                   515.124.4169         16-08-94 FI_ACCOUNT       9000                       108           100
+        175 Alyssa               Hutton                    AHUTTON                   011.44.1644.429266   19-03-97 SA_REP           8800            .25        149            80
+        176 Jonathon             Taylor                    JTAYLOR                   011.44.1644.429265   24-03-98 SA_REP           8600             .2        149            80
+        177 Jack                 Livingston                JLIVINGS                  011.44.1644.429264   23-04-98 SA_REP           8400             .2        149            80
+        206 William              Gietz                     WGIETZ                    515.123.8181         07-06-94 AC_ACCOUNT       8300                       205           110
+        121 Adam                 Fripp                     AFRIPP                    650.123.2234         10-04-97 ST_MAN           8200                       100            50
+        110 John                 Chen                      JCHEN                     515.124.4269         28-09-97 FI_ACCOUNT       8200                       108           100
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        153 Christopher          Olsen                     COLSEN                    011.44.1344.498718   30-03-98 SA_REP           8000             .2        145            80
+        120 Matthew              Weiss                     MWEISS                    650.123.1234         18-07-96 ST_MAN           8000                       100            50
+        159 Lindsey              Smith                     LSMITH                    011.44.1345.729268   10-03-97 SA_REP           8000             .3        146            80
+        122 Payam                Kaufling                  PKAUFLIN                  650.123.3234         01-05-95 ST_MAN           7900                       100            50
+        112 Jose Manuel          Urman                     JMURMAN                   515.124.4469         07-03-98 FI_ACCOUNT       7800                       108           100
+        111 Ismael               Sciarra                   ISCIARRA                  515.124.4369         30-09-97 FI_ACCOUNT       7700                       108           100
+        160 Louise               Doran                     LDORAN                    011.44.1345.629268   15-12-97 SA_REP           7500             .3        146            80
+        154 Nanette              Cambrault                 NCAMBRAU                  011.44.1344.987668   09-12-98 SA_REP           7500             .2        145            80
+        171 William              Smith                     WSMITH                    011.44.1343.629268   23-02-99 SA_REP           7400            .15        148            80
+        172 Elizabeth            Bates                     EBATES                    011.44.1343.529268   24-03-99 SA_REP           7300            .15        148            80
+        164 Mattea               Marvins                   MMARVINS                  011.44.1346.329268   24-01-00 SA_REP           7200             .1        147            80
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        155 Oliver               Tuvault                   OTUVAULT                  011.44.1344.486508   23-11-99 SA_REP           7000            .15        145            80
+        178 Kimberely            Grant                     KGRANT                    011.44.1644.429263   24-05-99 SA_REP           7000            .15        149              
+        161 Sarath               Sewall                    SSEWALL                   011.44.1345.529268   03-11-98 SA_REP           7000            .25        146            80
+        113 Luis                 Popp                      LPOPP                     515.124.4567         07-12-99 FI_ACCOUNT       6900                       108           100
+        165 David                Lee                       DLEE                      011.44.1346.529268   23-02-00 SA_REP           6800             .1        147            80
+        203 Susan                Mavris                    SMAVRIS                   515.123.7777         07-06-94 HR_REP           6500                       101            40
+        123 Shanta               Vollman                   SVOLLMAN                  650.123.4234         10-10-97 ST_MAN           6500                       100            50
+
+51 rows selected. 
+
+
+MAX_SALARY_IN_IT NUMBER_OF_EMPLOYEES_IN_IT
+---------------- -------------------------
+            6000                         4
+
+
+MIN_SALARY_IN_FINANCE NUMBER_OF_EMPLOYEES_IN_FINANCE
+--------------------- ------------------------------
+                 6900                              6
+
+
+AVG_SALARY_IN_HR NUMBER_OF_EMPLOYEES_IN_HR
+---------------- -------------------------
+            6500                         1
+
+
+'MAX_SALAR MAX_SALARY_IN_IT NUMBER_OF_EMPLOYEES_IN_IT
+---------- ---------------- -------------------------
+max_salary             6000                         4
+min_salary             6900                         6
+
+
+MAX(MAX_SALARY_IN_IT) MAX(NUMBER_OF_EMPLOYEES_IN_IT) MAX(MIN_SALARY_IN_FINANCE) MAX(NUMBER_OF_EMPLOYEES_IN_FINANCE)
+--------------------- ------------------------------ -------------------------- -----------------------------------
+                 6000                              4                       6900                                   6
+
+
+TOTAL_NUMBER_OF_EMPLOYEES SUM_OF_SALARIES MAX_SALARY_OF_IT NUMBER_OF_EMP_IN_IT MIN_SALARY_OF_FINANCE NUMBER_OF_EMP_IN_FINANCE AVG_SALARY_OF_HR NUMBER_OF_EMP_IN_HR
+------------------------- --------------- ---------------- ------------------- --------------------- ------------------------ ---------------- -------------------
+                      107          691400             6000                   4                  6900                        6             6500                   1
+
+
+DEPARTMENT_NAME                MAX_SALARY
+------------------------------ ----------
+Executive                           24000
+IT                                   9000
+Finance                             12000
+Purchasing                          11000
+Shipping                             8200
+Sales                               14000
+Administration                       4400
+Marketing                           13000
+Human Resources                      6500
+Public Relations                    10000
+Accounting                          12000
+
+11 rows selected. 
+
+
+DEPARTMENT_NAME                NUM_OF_EMPLOYEES
+------------------------------ ----------------
+Administration                                1
+Marketing                                     2
+Purchasing                                    6
+Human Resources                               1
+Shipping                                     45
+IT                                            5
+Public Relations                              1
+Sales                                        34
+Executive                                     3
+Finance                                       6
+Accounting                                    2
+
+11 rows selected. 
+
+
+DEPARTMENT_NAME                NUM_OF_EMPLOYEES MAX_SALARY MIN_SALARY AVG_SALARY
+------------------------------ ---------------- ---------- ---------- ----------
+Executive                                     3      24000      17000   19333.33
+IT                                            5       9000       4200       5760
+Finance                                       6      12000       6900       8600
+Purchasing                                    6      11000       2500       4150
+Shipping                                     45       8200       2100    3475.56
+Sales                                        34      14000       6100    8955.88
+Administration                                1       4400       4400       4400
+Marketing                                     2      13000       6000       9500
+Human Resources                               1       6500       6500       6500
+Public Relations                              1      10000      10000      10000
+Accounting                                    2      12000       8300      10150
+
+11 rows selected. 
+
+
+LOCATION                       NUM_OF_DEPARTNENTS
+------------------------------ ------------------
+London                                          1
+Munich                                          1
+Oxford                                          1
+Seattle                                        21
+South San Francisco                             1
+Southlake                                       1
+Toronto                                         1
+
+7 rows selected. 
+
+
+MANAGER_NAME                                   NUM_OF_EMPLOYEES
+---------------------------------------------- ----------------
+Steven King                                                  14
+Neena Kochhar                                                 5
+Lex De Haan                                                   1
+Alexander Hunold                                              4
+Nancy Greenberg                                               5
+Den Raphaely                                                  5
+Matthew Weiss                                                 8
+Adam Fripp                                                    8
+Payam Kaufling                                                8
+Shanta Vollman                                                8
+Kevin Mourgos                                                 8
+
+MANAGER_NAME                                   NUM_OF_EMPLOYEES
+---------------------------------------------- ----------------
+John Russell                                                  6
+Karen Partners                                                6
+Alberto Errazuriz                                             6
+Gerald Cambrault                                              6
+Eleni Zlotkey                                                 6
+Michael Hartstein                                             1
+Shelley Higgins                                               1
+
+18 rows selected. 
+
+
+DEPARTMENT_ID DEPARTMENT_NAME                NUM_0F_EMPLOYEES_RESIGNED
+------------- ------------------------------ -------------------------
+           50 Shipping                                               2
+          110 Accounting                                             2
+           90 Executive                                              2
+           80 Sales                                                  2
+
+
+DEPARTMENT_ID DEPARTMENT_NAME                NUM_0F_EMPLOYEES_RESIGNED
+------------- ------------------------------ -------------------------
+           50 Shipping                                               2
+          110 Accounting                                             2
+           90 Executive                                              2
+           80 Sales                                                  2
+
+
+DEPARTMENT_NAME                MAX_SALARY
+------------------------------ ----------
+Executive                           24000
+Sales                               14000
+Marketing                           13000
+Finance                             12000
+Accounting                          12000
+Purchasing                          11000
+
+6 rows selected. 
+
+
+DEPARTMENT_ID DEPARTMENT_NAME                MANAGER_NAME                                   CITY                           MAX_SALARY MIN_SALARY AVG_SALARY NUM_OF_EMPLOYEES TOTAL_SALARY NUM_OF_EMPLOYEES_RESIGNED
+------------- ------------------------------ ---------------------------------------------- ------------------------------ ---------- ---------- ---------- ---------------- ------------ -------------------------
+           10 Administration                 Jennifer Whalen                                Seattle                              4400       4400       4400                1         4400                          
+           20 Marketing                      Michael Hartstein                              Toronto                             13000       6000       9500                2        19000                         1
+           30 Purchasing                     Den Raphaely                                   Seattle                             11000       2500       4150                6        24900                          
+           40 Human Resources                Susan Mavris                                   London                               6500       6500       6500                1         6500                          
+           50 Shipping                       Adam Fripp                                     South San Francisco                  8200       2100    3475.56               45       156400                         2
+           60 IT                             Alexander Hunold                               Southlake                            9000       4200       5760                5        28800                         1
+           70 Public Relations               Hermann Baer                                   Munich                              10000      10000      10000                1        10000                          
+           80 Sales                          John Russell                                   Oxford                              14000       6100    8955.88               34       304500                         2
+           90 Executive                      Steven King                                    Seattle                             24000      17000   19333.33                3        58000                         2
+          100 Finance                        Nancy Greenberg                                Seattle                             12000       6900       8600                6        51600                          
+          110 Accounting                     Shelley Higgins                                Seattle                             12000       8300      10150                2        20300                         2
+
+DEPARTMENT_ID DEPARTMENT_NAME                MANAGER_NAME                                   CITY                           MAX_SALARY MIN_SALARY AVG_SALARY NUM_OF_EMPLOYEES TOTAL_SALARY NUM_OF_EMPLOYEES_RESIGNED
+------------- ------------------------------ ---------------------------------------------- ------------------------------ ---------- ---------- ---------- ---------------- ------------ -------------------------
+          120 Treasury                                                                      Seattle                                                                                                                
+          130 Corporate Tax                                                                 Seattle                                                                                                                
+          140 Control And Credit                                                            Seattle                                                                                                                
+          150 Shareholder Services                                                          Seattle                                                                                                                
+          160 Benefits                                                                      Seattle                                                                                                                
+          170 Manufacturing                                                                 Seattle                                                                                                                
+          180 Construction                                                                  Seattle                                                                                                                
+          190 Contracting                                                                   Seattle                                                                                                                
+          200 Operations                                                                    Seattle                                                                                                                
+          210 IT Support                                                                    Seattle                                                                                                                
+          220 NOC                                                                           Seattle                                                                                                                
+
+DEPARTMENT_ID DEPARTMENT_NAME                MANAGER_NAME                                   CITY                           MAX_SALARY MIN_SALARY AVG_SALARY NUM_OF_EMPLOYEES TOTAL_SALARY NUM_OF_EMPLOYEES_RESIGNED
+------------- ------------------------------ ---------------------------------------------- ------------------------------ ---------- ---------- ---------- ---------------- ------------ -------------------------
+          230 IT Helpdesk                                                                   Seattle                                                                                                                
+          240 Government Sales                                                              Seattle                                                                                                                
+          250 Retail Sales                                                                  Seattle                                                                                                                
+          260 Recruiting                                                                    Seattle                                                                                                                
+          270 Payroll                                                                       Seattle                                                                                                                
+
+27 rows selected. 
+
+
+DEPARTMENT_ID DEPARTMENT_NAME                MANAGER_ID LOCATION_ID
+------------- ------------------------------ ---------- -----------
+           10 Administration                        200        1700
+           20 Marketing                             201        1800
+           30 Purchasing                            114        1700
+           40 Human Resources                       203        2400
+           50 Shipping                              121        1500
+           60 IT                                    103        1400
+           70 Public Relations                      204        2700
+           80 Sales                                 145        2500
+           90 Executive                             100        1700
+          100 Finance                               108        1700
+          110 Accounting                            205        1700
+
+11 rows selected. 
+
+
+EMPLOYEE_ID FIRST_NAME           LAST_NAME                 EMAIL                     PHONE_NUMBER         HIRE_DAT JOB_ID         SALARY COMMISSION_PCT MANAGER_ID DEPARTMENT_ID
+----------- -------------------- ------------------------- ------------------------- -------------------- -------- ---------- ---------- -------------- ---------- -------------
+        178 Kimberely            Grant                     KGRANT                    011.44.1644.429263   24-05-99 SA_REP           7000            .15        149              
+
+no rows selected
